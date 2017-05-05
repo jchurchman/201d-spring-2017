@@ -100,12 +100,12 @@ new branch for your work on the next question!
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-    var firstAdds = sum( a, b );
-    var nextAdds = sum( firstAdds[0], c );
+    var firstAdd = sum( a, b );
+    var nextAdd= sum( firstAdd[0], c );
 
     var firstProd = multiply(a,b);
     var prodThree = multiply(firstProd[0], c );
-    return [ nextAdds[0], prodThree[0], + a + " and " + b + " and " + c + " sum to " + nextAdds[0] + ".", "The product of " + a + " and " + b + " and " + c + " is " + prodThree[0] + "." ];
+    return [ nextAdd[0], prodThree[0], + a + " and " + b + " and " + c + " sum to " + nextAdd[0] + ".", "The product of " + a + " and " + b + " and " + c + " is " + prodThree[0] + "." ];
 }
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
@@ -138,11 +138,13 @@ new branch for your work on the next question!
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
+    var sumTwo = sum( testArray[0], testArray[1]);
+    var sumThird = sum( sumTwo[0], testArray[2]);
+    return [ sumThird[0], testArray + " was passed in as an array of numbers, and " + sumThird[0] + " is their sum." ];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+testSumArray(testArray);
 
 
 /////////////////////////////////////
