@@ -96,16 +96,19 @@ function and see if the test passes.
 Once you get the test passing, do an a-c-p cycle and synchronize the 
 code between GitHub and your laptop. Don't forget to create a 
 new branch for your work on the next question!
-
 */
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
+    var firstAdds = sum( a, b );
+    var nextAdds = sum( firstAdds[0], c );
 
+    var firstProd = multiply(a,b);
+    var prodThree = multiply(firstProd[0], c );
+    return [ nextAdds[0], prodThree[0], + a + " and " + b + " and " + c + " sum to " + nextAdds[0] + ".", "The product of " + a + " and " + b + " and " + c + " is " + prodThree[0] + "." ];
 }
-
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////
